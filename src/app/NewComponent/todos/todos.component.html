@@ -1,0 +1,5 @@
+<app-addtodo (todoadd)="addtodo($event)"></app-addtodo>
+<h3 class="text-success">My Todos</h3>
+<div class="my-3" *ngFor="let todo of todos">
+    <app-todoitem [todo]="todo" (tododelete)="deletetodo($event)" (todocheckbox)="toggletodo($event)"></app-todoitem>
+</div>
